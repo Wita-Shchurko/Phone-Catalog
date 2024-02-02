@@ -1,0 +1,46 @@
+{
+	"id": "samsung-galaxy-tab-a9-64gb-graphite",
+"namespaceId": "samsung-galaxy-tab-a9",
+"name": "Samsung Galaxy Tab A9 64GB Graphite",
+"capacityAvailable": ["64GB"],
+"capacity": "46GB",
+"priceRegular": 750,
+"priceDiscount": 680,
+"colorsAvailable": ["graphite"],
+"color": "graphite",
+"images": [
+	"img/tablets/samsung-galaxy-tab-a9/graphite/00.jpg",
+	"img/tablets/samsung-galaxy-tab-a9/graphite/01.jpg",
+	"img/tablets/samsung-galaxy-tab-a9/graphite/02.jpg",
+	"img/tablets/samsung-galaxy-tab-a9/graphite/03.jpg",
+	"img/tablets/samsung-galaxy-tab-a9/graphite/04.jpg"
+],
+"description": [
+	{
+		"title": "Refined aesthetics of style",
+		"text": [
+			"Classic and modern are perfectly combined in the stylish Galaxy Tab A9 and Tab A9+ tablets from Samsung.",
+			"Their sophisticated design, complemented by a touch of restraint, epitomizes elegance and features a sleek and durable metal body. Enjoy Samsung's unique corporate style in dark blue, graphite and silver, each of which will emphasize your individuality."
+		]
+	},
+	{
+		"title": "Harmony of smoothness and brightness of the display",
+		"text": [
+			"Enjoy deep and vivid playback of content on the Galaxy Tab A9+ tablet. Thanks to the remarkable refresh rate of the screen, you can immerse yourself in the world of visual effects with smooth and natural movements. Get the most out of your digital entertainment experience, no matter where you are - indoors or outdoors in bright sunshine. Now every detail of the plot will be displayed amazingly clearly and distinctly."
+		]
+	},
+	{
+		"title": "Large storage and speed of interaction",
+		"text": [
+			"Now you can forget about the limited free space in the tablet memory and enjoy a massive multimedia collection without limits. 128 GB of built-in storage is enough for all your videos, photos and files in high resolution. If that's not enough, you can always install a microSD memory card up to 1 TB. At the same time, the RAM of 8 GB will provide an amazing speed of response and minimal delays when working in multitasking mode."
+		]
+	}
+],
+"screen": "8.7' IPS",
+"resolution": "1340x800",
+"processor": "MediaTek Helio G99 + Mali-G57 MC2",
+"ram": "4GB",
+"camera": "8 Mp + 2 Mp",
+"zoom": "Digital, 4x",
+"cell": ["GPRS", "EDGE", "HSPA", "LTE"]
+}
