@@ -1,8 +1,18 @@
+@import '../../GeneralStyles/variables';
+
 .homePage {
   display: flex;
   flex-direction: column;
   gap: 80px;
   margin-bottom: 80px;
+
+	@media (max-width: $max-tablet-width) {
+		padding-top: 552px;
+	}
+
+	@media (max-width: $max-phone-width) {
+		padding-top: 426px;
+	}
 }
 
 .hotPrices {

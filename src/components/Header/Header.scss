@@ -2,6 +2,7 @@
 @import '../../GeneralStyles/mixins';
 
 .header {
+	position: relative;
 	border-bottom: 1px solid $elements-color;
 	height: 65px;
 
@@ -14,6 +15,36 @@
 		display: flex;
 		justify-content: space-between;
 		align-self: start;
+
+		@media (max-width: $max-phone-width) {
+			padding-inline: 0;
+		}
+	}
+
+	&__start {
+		position: relative;
+		display: flex;
+		gap: 64px;
+
+		@media (max-width: $max-small-laptop-width) {
+			gap: 30px;
+		}
+	}
+
+	&__menu-btn {
+		@include menu-button;
+	}
+
+	&__menu-close {
+		@include menu-button;
+
+		&:before {
+			transform: translateY(10px/2 + 4px/2) rotate(-225deg);
+		}
+
+		&:after {
+			transform: translateY(10px/-2 + 4px/-2) rotate(225deg);
+		}
 	}
 
 	&__nav {
@@ -24,6 +55,10 @@
 		&--logo {
 			height: 24px;
 			margin-block: auto;
+
+			@media (max-width: $max-phone-width) {
+				padding-left: 24px;
+			}
 		}
 	}
 
@@ -59,7 +94,9 @@
 			vertical-align: baseline;
 		}
 
-		@include link-hover;
+		@media (min-width: 869px) {
+			@include link-hover;
+		}
 
 		&::after {
 			bottom: -1px;

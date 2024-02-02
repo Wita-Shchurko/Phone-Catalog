@@ -4,11 +4,23 @@
   padding-top: 40px;
   padding-bottom: 32px;
 
+	@media (max-width: $max-tablet-width) {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100vw;
+	}
+
   &__img {
     padding-inline: 48px;
     width: 100%;
     height: 400px;
     object-fit: cover;
+
+		@media (max-width: $max-phone-width) {
+			padding-inline: 0;
+			height: 274px;
+		}
   }
 
   .carousel-control-prev,
@@ -17,6 +29,10 @@
     width: 32px;
     background-color: #fff;
     opacity: 0.8;
+
+		@media (max-width: $max-phone-width) {
+			display: none;
+		}
   }
 
   .carousel-control-prev-icon {

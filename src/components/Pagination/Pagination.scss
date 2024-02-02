@@ -6,6 +6,10 @@
   justify-content: center;
   margin-bottom: 80px;
 
+	@media (max-width: $max-tablet-width) {
+		flex-wrap: wrap;
+	}
+
   &__btn {
     width: 32px;
     height: 32px;
@@ -15,9 +19,11 @@
     font-size: 14px;
     font-weight: 500;
 
-    &:hover {
-      border: 1px solid $primary-color;
-    }
+		@media (min-width: 869px) {
+			&:hover {
+				border: 1px solid $primary-color;
+			}
+		}
 
     &--prew {
       margin-right: 8px;
@@ -31,10 +37,12 @@
     &--disabled {
       opacity: .5;
 
-      &:hover {
-        border: 1px solid $icons-color;
-        cursor: auto;
-      }
+			@media (min-width: 869px) {
+				&:hover {
+					border: 1px solid $icons-color;
+					cursor: auto;
+				}
+			}
     }
 
     &--active {

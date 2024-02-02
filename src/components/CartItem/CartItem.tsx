@@ -40,7 +40,7 @@ export const CartItem: React.FC<Props> = ({ product }) => {
 
   return (
     <div className="cartItem">
-      <div>
+      <div className="cartItem__block">
         <button
           type="button"
           className="cartItem__delete-btn"

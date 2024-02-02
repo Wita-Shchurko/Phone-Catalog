@@ -4,12 +4,24 @@
   border-top: 1px solid $elements-color;
   align-self: end;
 
+	@media (max-width: $max-tablet-width) {
+		padding-block: 10px;
+	}
 
   &__container {
     min-height: 96px;
     display: flex;
     position: relative;
     justify-content: space-between;
+
+		@media (max-width: $max-tablet-width) {
+			flex-direction: column;
+			padding-inline: 30px;
+		}
+
+		@media (max-width: $max-phone-width) {
+			padding-inline: 0;
+		}
   }
 
   &__logo {
@@ -23,6 +35,19 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+		@media (max-width: $max-tablet-width) {
+			left: auto;
+			right: 0;
+			transform: translate(-30px, -50%);
+			flex-direction: column;
+			width: fit-content;
+			background: transparent;
+		}
+
+		@media (max-width: $max-phone-width) {
+			transform: translate(0, -50%);
+		}
   }
 
   &__scroll {
@@ -35,6 +60,10 @@
     display: flex;
     align-items: center;
     margin: auto 0;
+
+		@media (max-width: $max-tablet-width) {
+			padding-left: 0;
+		}
 
     &-text {
       margin-right: 16px;
@@ -49,15 +78,17 @@
       transition: all $duration-time;
     }
 
-    &:hover {
-      .footer__scroll-text {
-        color: black;
-      }
-
-      .footer__scroll-icon {
-        border: 1px solid $primary-color;
-      }
-    }
+		@media (min-width: 869px) {
+			&:hover {
+				.footer__scroll-text {
+					color: black;
+				}
+	
+				.footer__scroll-icon {
+					border: 1px solid $primary-color;
+				}
+			}
+		}
   }
 
 }

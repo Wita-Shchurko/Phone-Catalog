@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable global-require */
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavLink, useLocation, useSearchParams } from 'react-router-dom';
 import './Header.scss';
 import classNames from 'classnames';
@@ -21,6 +21,7 @@ const getAdditionalLinkClass
 );
 
 export const Header: React.FC = () => {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchParams] = useSearchParams();
   const { favouritesList, cartList } = useContext(GeneralContext);
   const { pathname } = useLocation();
@@ -28,45 +29,59 @@ export const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="header__wrapper">
-        <nav className="header__nav nav">
-          <NavLink
-            to="/"
-            className="header__nav--logo"
-          >
-            <img
-              src={require('../../images/icons/Logo.svg').default}
-              alt="Logo"
-            />
-          </NavLink>
+				<div className="header__start">
+					<NavLink
+						to="/"
+						className="header__nav--logo"
+					>
+						<img
+							src={require('../../images/icons/Logo.svg').default}
+							alt="Logo"
+						/>
+					</NavLink>
 
-          <NavLink
-            to="/"
-            className={getLinkClass}
-          >
-            Home
-          </NavLink>
+					<button
+						className="header__menu-btn"
+						onClick={() => setIsMenuOpen(true)}
+					/>
 
-          <NavLink
-            to="/phones"
-            className={getLinkClass}
-          >
-            Phones
-          </NavLink>
+					<nav className={classNames('header__nav', 'nav', {
+						'nav__close' : !isMenuOpen,
+					})}>
+						<NavLink
+								to="/"
+								className={getLinkClass}
+							>
+								Home
+							</NavLink>
 
-          <NavLink
-            to="/tablets"
-            className={getLinkClass}
-          >
-            Tablets
-          </NavLink>
+							<NavLink
+								to="/phones"
+								className={getLinkClass}
+							>
+								Phones
+							</NavLink>
 
-          <NavLink
-            to="/accessories"
-            className={getLinkClass}
-          >
-            Accessories
-          </NavLink>
-        </nav>
+							<NavLink
+								to="/tablets"
+								className={getLinkClass}
+							>
+								Tablets
+							</NavLink>
+
+							<NavLink
+								to="/accessories"
+								className={getLinkClass}
+							>
+								Accessories
+							</NavLink>
+
+							<button
+								className="header__menu-close"
+								onClick={() => setIsMenuOpen(false)}
+							/>
+					</nav>
+				</div>
 
         <div className="header__additional-links">
           {pathname === '/phones' && <Search />}

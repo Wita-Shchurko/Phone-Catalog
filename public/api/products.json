@@ -1063,5 +1063,20 @@
     "ram": "3GB",
     "year": 2018,
     "image": "img/phones/apple-iphone-xr/yellow/00.jpg"
+  },
+	{
+    "id": "72",
+    "category": "tablets",
+    "phoneId": "samsung-galaxy-tab-a9-64gb-graphite",
+    "itemId": "samsung-galaxy-tab-a9-64gb-graphite",
+    "name": "Samsung Galaxy Tab A9 64GB Graphite",
+    "fullPrice": 750,
+    "price": 680,
+    "screen": "8.7' IPS",
+    "capacity": "64GB",
+    "color": "graphite",
+    "ram": "4GB",
+    "year": 2021,
+    "image": "img/tablets/samsung-galaxy-tab-a9/graphite/00.jpg"
   }
 ]

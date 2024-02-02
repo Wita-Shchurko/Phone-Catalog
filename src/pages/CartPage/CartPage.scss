@@ -25,6 +25,10 @@
     margin-top: 24px;
     display: flex;
     gap: 16px;
+
+		@media (max-width: $max-tablet-width) {
+			flex-direction: column;
+		}
   }
 
   &__itemsList {
@@ -32,6 +36,10 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+		@media (max-width: $max-tablet-width) {
+			width: 100%;
+		}
   }
 
   &__total {
@@ -73,9 +81,11 @@
     font-weight: 600;
     border: none;
 
-    &:hover {
-      box-shadow: 0 3px 13px 0 rgba(23, 32, 49, 0.26);
-    }
+		@media (min-width: 869px) {
+			&:hover {
+				box-shadow: 0 3px 13px 0 rgba(23, 32, 49, 0.26);
+			}
+		}
 
     &:active {
       transform: scale(0.97);

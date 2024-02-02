@@ -29,25 +29,29 @@ img {
   vertical-align: baseline;
 }
 
+.main {
+	position: relative;
+}
+
 .wrapper {
   width: 1136px;
   margin: 0 auto;
 
-	@media (max-width: 1200px) {
+	@media (max-width: $max-small-laptop-width) {
 		width: 848px;
 	}
 
-	@media (max-width: 868px) {
+	@media (max-width: $max-tablet-width) {
 		width: 560px;
 	}
 
-	@media (max-width: 580px) {
+	@media (max-width: $max-phone-width) {
 		width: 272px;
 	}
 }
 
 .App {
-  min-height: 100vh;
+  min-height: 100svh;
   display: grid;
   grid-template-rows: min-content min-content 1fr min-content;
 }

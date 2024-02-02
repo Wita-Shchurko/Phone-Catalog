@@ -37,9 +37,11 @@
 			height: 272px;
 		}
 
-    &:hover {
-      transform: scale(1.2);
-    }
+		@media (min-width: 869px) {
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
   }
 
   &__title {

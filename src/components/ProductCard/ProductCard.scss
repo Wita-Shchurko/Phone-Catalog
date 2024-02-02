@@ -8,9 +8,11 @@
   flex-direction: column;
   justify-content: space-between;
 
-  &:hover {
-    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05);
-  }
+	@media (min-width: 869px) {
+		&:hover {
+			box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05);
+		}
+	}
 
   &__top-content {
     text-decoration: none;
@@ -115,9 +117,11 @@
       background-color: transparent;
     }
 
-    &:hover {
-      box-shadow: 0 3px 13px 0 rgba(23, 32, 49, 0.26);
-    }
+		@media (min-width: 869px) {
+			&:hover {
+				box-shadow: 0 3px 13px 0 rgba(23, 32, 49, 0.26);
+			}
+		}
   }
 
   &__favorites {
@@ -133,8 +137,10 @@
       border: 1px solid $icons-color;
     }
 
-    &:hover {
-      border: 1px solid $primary-color;
-    }
+		@media (min-width: 869px) {
+			&:hover {
+				border: 1px solid $primary-color;
+			}
+		}
   }
 }

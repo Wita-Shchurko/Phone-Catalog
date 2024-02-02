@@ -2,12 +2,30 @@
 
 .cartItem {
   width: 752px;
-  height: 128px;
+  min-height: 128px;
   border: 1px solid $elements-color;
   padding: 24px 0 24px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+	@media (max-width: $max-small-laptop-width) {
+		width: 582px;
+	}
+
+	@media (max-width: $max-tablet-width) {
+		width: 100%;
+	}
+
+	@media (max-width: $max-phone-width) {
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	&__block {
+		display: flex;
+    align-items: center;
+	}
 
   &__delete-btn {
     background-color: transparent;
@@ -15,12 +33,20 @@
     width: 16px;
     height: 16px;
     padding: 0;
+
+		img {
+			vertical-align: baseline;
+		}
   }
 
   &__img {
     height: 80px;
     padding: 7px;
     margin-inline: 30px;
+
+		@media (max-width: $max-small-laptop-width) {
+			margin-inline: 10px;
+		}
   }
 
   &__title {
@@ -29,11 +55,19 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
+
+		@media (max-width: $max-tablet-width) {
+			max-width: 210px;
+		}
   }
 
   &__calculation {
     display: flex;
     gap: 43px;
+
+		@media (max-width: $max-small-laptop-width) {
+			gap: 20px;
+		}
   }
 
   &__quantity {

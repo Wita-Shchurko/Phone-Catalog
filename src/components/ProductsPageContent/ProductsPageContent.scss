@@ -9,6 +9,10 @@
     display: flex;
     gap: 8px;
     align-items: center;
+
+		@media (max-width: $max-phone-width) {
+			padding-top: 64px;
+		}
   }
 
   &__goHome {
@@ -88,10 +92,18 @@
 
     &--sortBy {
       width: 176px;
+
+			@media (max-width: $max-phone-width) {
+				width: 168px;
+			}
     }
 
     &--itemsOnPage {
       width: 128px;
+
+			@media (max-width: $max-phone-width) {
+				width: 88px;
+			}
     }
   }
 }

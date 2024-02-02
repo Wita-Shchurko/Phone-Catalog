@@ -6,6 +6,24 @@
 	display: flex;
 	gap: 64px;
 
+	@media (max-width: $max-small-laptop-width) {
+		gap: 30px;
+	}
+
+	@media (max-width: $max-tablet-width) {
+		position: absolute;
+		flex-direction: row;
+		gap: 0px;
+		justify-content: space-around;
+		width: 100vw;
+		background: #fff;
+		z-index: 10000;
+		height: 100%;
+		top: 0;
+		left: 0;
+		transition: all $duration-time;
+	}
+
 	&__link {
 		position: relative;
 		text-decoration: none;
@@ -17,6 +35,18 @@
 		letter-spacing: 0.48px;
 		transition: all $duration-time;
 
-		@include link-hover;
+		@media (min-width: 869px) {
+			@include link-hover;
+		}
+
+		@media (max-width: $max-phone-width) {
+			font-size: 11px;
+		}
+	}
+
+	&__close {
+		top: 0;
+		left: -100vw;
+		transition: all $duration-time;
 	}
 }

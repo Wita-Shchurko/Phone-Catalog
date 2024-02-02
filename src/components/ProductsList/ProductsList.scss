@@ -1,7 +1,21 @@
+@import '../../GeneralStyles/variables';
+
 .productList {
   margin-block: 24px 40px;
   display: grid;
   grid-template: 1fr / repeat(4, 1fr);
   grid-auto-rows: 1fr;
   gap: 40px 16px;
+
+	@media (max-width: $max-small-laptop-width) {
+		grid-template: 1fr / repeat(3, 1fr);
+	}
+
+	@media (max-width: $max-tablet-width) {
+		grid-template: 1fr / repeat(2, 1fr);
+	}
+
+	@media (max-width: $max-phone-width) {
+		grid-template: 1fr / repeat(1, 1fr);
+	}
 }

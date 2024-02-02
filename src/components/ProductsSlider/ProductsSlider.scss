@@ -22,9 +22,11 @@
     background-color: #fff;
     transition: all $duration-time;
 
-    &:hover {
-      border: 1px solid $primary-color;
-    }
+		@media (min-width: 869px) {
+			&:hover {
+				border: 1px solid $primary-color;
+			}
+		}
 
     &--prev {
       margin-right: 16px;
@@ -33,9 +35,11 @@
     &--disabled {
       border: 1px solid $elements-color;
 
-      &:hover {
-        border: 1px solid $elements-color;
-      }
+			@media (min-width: 869px) {
+				&:hover {
+					border: 1px solid $elements-color;
+				}
+			}
     }
   }
 }
