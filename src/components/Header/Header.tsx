@@ -26,6 +26,10 @@ export const Header: React.FC = () => {
   const { favouritesList, cartList } = useContext(GeneralContext);
   const { pathname } = useLocation();
 
+	const itemsNumber = cartList.reduce((acc, current) => {
+		return acc + current.quantity;
+	}, 0)
+
   return (
     <header className="header">
       <div className="header__wrapper">
@@ -119,7 +123,7 @@ export const Header: React.FC = () => {
 
             {cartList.length > 0 && (
               <div className="header__counter">
-                {cartList.length}
+                {itemsNumber}
               </div>
             )}
           </NavLink>
