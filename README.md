@@ -1,7 +1,8 @@
-# Phone catalog
+# Gadget store
+
+## [🔴Demo](https://wita-shchurko.github.io/Phone-Catalog/)
 
 Implementation of catalog with React and Typescript according to [design](https://www.figma.com/file/uEetgWenSRxk9jgiym6Yzp/Phone-catalog-redesign?node-id=1%3A2)
-## [Open the site](https://wita-shchurko.github.io/Phone-Catalog/)
 
 
 I structured and implemented a web application with organized folders and styling using SCSS and BEM naming.
